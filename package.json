@@ -1,0 +1,26 @@
+{
+  "name": "ts-node-performance",
+  "version": "0.1.0",
+  "description": "",
+  "types": "dist/src/index.d.ts",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "prepublishOnly": "npm run build",
+    "test": "mocha --opts ./test/mocha.opts",
+    "test-js": "npm run build && mocha --opts ./test/mocha.node.opts"
+  },
+  "author": "",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "4.1.7",
+    "@types/mocha": "5.2.5",
+    "chai": "4.2.0",
+    "mocha": "5.2.0",
+    "ts-node": "7.0.1",
+    "typescript": "3.2.2"
+  },
+  "engines": {
+    "node": "10.14.2"
+  }
+}
